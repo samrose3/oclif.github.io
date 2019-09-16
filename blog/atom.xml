@@ -2,12 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://oclif.github.io/blog</id>
     <title>oclif: The Open CLI Framework Blog</title>
-    <updated>2019-02-20T06:00:00Z</updated>
+    <updated>2019-09-16T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://oclif.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</subtitle>
     <logo>https://oclif.github.io/img/oclif_rev.svg</logo>
     <rights>Copyright © 2019 Salesforce.com</rights>
+    <entry>
+        <title type="html"><![CDATA[oclifconf 2019: A Recap]]></title>
+        <id>https://oclif.github.io/blog/2019/09/16/oclifconf-recap.html</id>
+        <link href="https://oclif.github.io/blog/2019/09/16/oclifconf-recap.html">
+        </link>
+        <updated>2019-09-16T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>In May, Heroku and Salesforce Open Source organized <a href="https://oclif.io/conf">oclifconf</a>, a conference for developers &amp; product managers building CLI tools on top of <a href="https://github.com/oclif/oclif">the open source oclif framework</a>. The speakers came from various tech companies, such as Adobe, Netlify, and ...</p>]]></summary>
+        <author>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CLI Flags Explained]]></title>
         <id>https://oclif.github.io/blog/2019/02/20/cli-flags-explained.html</id>
