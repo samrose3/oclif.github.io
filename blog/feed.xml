@@ -4,7 +4,7 @@
         <title>oclif: The Open CLI Framework Blog</title>
         <link>https://oclif.github.io/blog</link>
         <description>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</description>
-        <lastBuildDate>Mon, 16 Sep 2019 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 31 Oct 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://oclif.github.io/blog</link>
         </image>
         <copyright>Copyright © 2019 Salesforce.com</copyright>
+        <item>
+            <title><![CDATA[oclif's Current Node Support]]></title>
+            <link>https://oclif.github.io/blog/2019/10/31/oclif-node-updates.html</link>
+            <guid>https://oclif.github.io/blog/2019/10/31/oclif-node-updates.html</guid>
+            <pubDate>Thu, 31 Oct 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>To maintain a healthy project trajectory, oclif follows and supports <a href="https://nodejs.org/en/about/releases/">Node Active LTS release</a>, currently Node 10 &amp; Node 12. This means ensuring that oclif continues to play nice with coming Active LTS Node versions and other packages in the ecosys...</p>]]></description>
+        </item>
         <item>
             <title><![CDATA[oclifconf 2019: A Recap]]></title>
             <link>https://oclif.github.io/blog/2019/09/16/oclifconf-recap.html</link>

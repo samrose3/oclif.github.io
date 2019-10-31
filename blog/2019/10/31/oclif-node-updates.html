@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>oclif&#x27;s Current Node Support · oclif: The Open CLI Framework</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="To maintain a healthy project trajectory, oclif follows and supports [Node Active LTS release](https://nodejs.org/en/about/releases/), currently Node 10 &amp; Node 12. This means ensuring that oclif continues to play nice with coming Active LTS Node versions and other packages in the ecosystem. Moving forward also means leaving older versions behind. Starting in 2020, Node will stop maintaining [Node 8](https://github.com/nodejs/Release#release-schedule) and it is our intent at that time to also follow suit. Let’s take a look at a few ways we will be supporting these changes."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="oclif&#x27;s Current Node Support · oclif: The Open CLI Framework"/><meta property="og:type" content="website"/><meta property="og:url" content="https://oclif.github.io/blog/2019/10/31/oclif-node-updates"/><meta property="og:description" content="To maintain a healthy project trajectory, oclif follows and supports [Node Active LTS release](https://nodejs.org/en/about/releases/), currently Node 10 &amp; Node 12. This means ensuring that oclif continues to play nice with coming Active LTS Node versions and other packages in the ecosystem. Moving forward also means leaving older versions behind. Starting in 2020, Node will stop maintaining [Node 8](https://github.com/nodejs/Release#release-schedule) and it is our intent at that time to also follow suit. Let’s take a look at a few ways we will be supporting these changes."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://oclif.github.io/blog/atom.xml" title="oclif: The Open CLI Framework Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://oclif.github.io/blog/feed.xml" title="oclif: The Open CLI Framework Blog RSS Feed"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-39697570-45', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/oclif_rev.svg" alt="oclif: The Open CLI Framework"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction" target="_self">Getting Started</a></li><li class=""><a href="/conf" target="_self">oclifconf</a></li><li class=""><a href="/docs/commands" target="_self">API Reference</a></li><li class="siteNavGroupActive"><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://spectrum.chat/oclif" target="_self">Discuss</a></li><li class=""><a href="https://github.com/oclif/oclif" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Recent Posts</span></h2></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2019/10/31/oclif-node-updates">oclif&#x27;s Current Node Support</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/09/16/oclifconf-recap">oclifconf 2019: A Recap</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/02/20/cli-flags-explained">CLI Flags Explained</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/03/20/introducing-oclif">Introducing oclif</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2019/10/31/oclif-node-updates">oclif&#x27;s Current Node Support</a></h1><p class="post-meta">October 31, 2019</p><div class="authorBlock"></div></header><div><span><p>To maintain a healthy project trajectory, oclif follows and supports <a href="https://nodejs.org/en/about/releases/">Node Active LTS release</a>, currently Node 10 &amp; Node 12. This means ensuring that oclif continues to play nice with coming Active LTS Node versions and other packages in the ecosystem. Moving forward also means leaving older versions behind. Starting in 2020, Node will stop maintaining <a href="https://github.com/nodejs/Release#release-schedule">Node 8</a> and it is our intent at that time to also follow suit. Let’s take a look at a few ways we will be supporting these changes.</p>
+<h2><a class="anchor" aria-hidden="true" id="ci-environments"></a><a href="#ci-environments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CI Environments</h2>
+<p>CLIs created with the oclif cli going forward will be generated with a CircleCI configuration with Node 10 &amp; 12 and an Appveyor configuration using Node 10. We have also added Node latest to CircleCi to be an early warning detection against coming Node changes (Node latest is managed by CircleCI).</p>
+<p>We have already updated every oclif repo's CI configs to reflect this.</p>
+<p>If your existing CLI uses either Appveyor or CircleCI you can update your config files also, like so:</p>
+<h3><a class="anchor" aria-hidden="true" id="circleci-configyml"></a><a href="#circleci-configyml" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.circleci/config.yml</h3>
+<p>Your CircleCI config should contain a <code>node-latest</code> job, aliased as <code>test</code>. From this, there should be two extensions of this job for the Active LTS Node versions, Node 10 and Node 12.</p>
+<pre><code class="hljs">  <span class="hljs-keyword">node</span>-10:<span class="hljs-title">
+    &lt;&lt;: *node-latest</span>
+    docker:
+      - image: <span class="hljs-keyword">node</span><span class="hljs-title">:10</span>
+  <span class="hljs-keyword">node</span>-12:<span class="hljs-title">
+    &lt;&lt;: *node-latest</span>
+    docker:
+      - image: <span class="hljs-keyword">node</span><span class="hljs-title">:12</span>
+</code></pre>
+<p>Notice that these declarations only change the Docker Node images used to run that job.</p>
+<p>Additionally, the jobs listed within workflows must also be updated to reflect our changes in configuration:</p>
+<pre><code class="hljs">    jobs:
+      - <span class="hljs-keyword">node</span><span class="hljs-title">-latest</span>
+      - <span class="hljs-keyword">node</span><span class="hljs-title">-10</span>
+      - <span class="hljs-keyword">node</span><span class="hljs-title">-12</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="appveyoryml"></a><a href="#appveyoryml" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>appveyor.yml</h3>
+<p>For appveyor we are currently only testing the oldest Active LTS Node version, Node 10. Update the <code>nodejs_version</code> proppert in your appveyor.yml file to reflect this.</p>
+<pre><code class="hljs"><span class="hljs-symbol">environment:</span>
+<span class="hljs-symbol">  nodejs_version:</span> <span class="hljs-string">"10"</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="deprecating-node-8-updating-packgejson-engines"></a><a href="#deprecating-node-8-updating-packgejson-engines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deprecating Node 8 &amp; Updating packge.json engines</h2>
+<p>In Jan 2020, Node will end its Node 8 maintenance. We will follow suit by setting the package.json engine property in oclif packages to <code>&gt;=10</code> and bumping the package's major versions.</p>
+<p>Depending on how you ship your CLI you may wish to also bump the engines version in your CLI's package.json. You can read more about the implications of the engines property configuration in the <a href="https://docs.npmjs.com/files/package.json#engines">npm documentation</a>.</p>
+<p>Also consider distributing your CLI with <a href="https://oclif.io/docs/releasing#standalone-tarballs">its own Node version</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="packaged-node-version"></a><a href="#packaged-node-version" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Packaged Node Version</h2>
+<p>When using dev-cli to pack your CLI it will use the Node version as specified in your package.json under the <code>oclif.update.node.version</code> property. This value should reflect an Active LTS Node version (dev-cli does not currently enforce versions).</p>
+<h2><a class="anchor" aria-hidden="true" id="supporting-the-future"></a><a href="#supporting-the-future" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Supporting the future</h2>
+<p>As a community we may discover bumps along the way as we upgrade. If you notice something related to oclif please feel free to open an issue or submit a pull request under the relevant oclif package within <a href="https://github.com/oclif">the org</a>.</p>
+<p>We look forward to using the latest from Node and the community and keeping oclif healthy along the way.</p>
+</span></div></div><div class="blogSocialSection"><div class="blogSocialSectionItem"><a href="https://twitter.com/share" class="twitter-share-button" data-text="oclif&#x27;s Current Node Support" data-url="https://oclif.github.io/blog/2019/10/31/oclif-node-updates" data-related="true" data-show-count="false">Tweet</a></div></div></div><div class="blog-recent"><a class="button" href="/blog">Recent Posts</a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://www.heroku.com/home">Heroku</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/master/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+              var search = docsearch({
+                
+                apiKey: '433a7758541da1949f63b813ddf5c78c',
+                indexName: 'oclif',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
