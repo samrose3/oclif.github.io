@@ -37,7 +37,6 @@
         <summary type="html"><![CDATA[<p><code>oclif</code> makes it easy to create a command line interface (CLI) in node. Most commands have <strong>parameters</strong> — also known as &quot;flags&quot;, &quot;args&quot;, and sometimes &quot;options&quot;. This blog post explains what these parameters are and when to ...</p>]]></summary>
         <author>
             <name>Casey Watts and Jeff Dickey</name>
-            <uri>https://twitter.com/kyloma</uri>
         </author>
     </entry>
     <entry>
@@ -49,7 +48,6 @@
         <summary type="html"><![CDATA[<p><img src="/img/2018-03-20-introducing-oclif/header.png" alt="Introducing oclif"></p> <p>Coding for the browser takes serious time. You need to deal with front-end JS, CSS, design, product, and a ton more. On the other hand, building for a CLI takes a fraction of the effort. This makes CLIs particularly great for prototyping out new fun...</p>]]></summary>
         <author>
             <name>Jeff Dickey</name>
-            <uri>https://twitter.com/jdxcode</uri>
         </author>
     </entry>
 </feed>
