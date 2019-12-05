@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://oclif.github.io/blog</id>
     <title>oclif: The Open CLI Framework Blog</title>
-    <updated>2019-12-05T06:00:00Z</updated>
-    <generator>Feed for Node.js</generator>
+    <updated>2019-12-05T06:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://oclif.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</subtitle>
     <logo>https://oclif.github.io/img/oclif_rev.svg</logo>
@@ -11,53 +11,61 @@
     <entry>
         <title type="html"><![CDATA[oclif TSLint to ESLint Migration]]></title>
         <id>https://oclif.github.io/blog/2019/12/05/oclif-eslint-migration.html</id>
-        <link href="https://oclif.github.io/blog/2019/12/05/oclif-eslint-migration.html">
-        </link>
-        <updated>2019-12-05T06:00:00Z</updated>
+        <link href="https://oclif.github.io/blog/2019/12/05/oclif-eslint-migration.html"/>
+        <updated>2019-12-05T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>Back in February of this year, plans were announced to <a href="https://github.com/palantir/tslint/issues/4534">deprecate TSLint</a> in favor of ESLint. TSLint's goal has become to work toward a “unified developer experience” by supporting ESLint development going forward.</p> <h2><a class="anchor" aria-hidden="true" id="what-has-changed-in-oclif"></a><a href="#what-has-changed-in-oclif" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>What has changed in oclif</h2> <p>To keep inl...</p>]]></summary>
         <author>
+            <name/>
+            <email/>
+            <uri/>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[oclif's Current Node Support]]></title>
         <id>https://oclif.github.io/blog/2019/10/31/oclif-node-updates.html</id>
-        <link href="https://oclif.github.io/blog/2019/10/31/oclif-node-updates.html">
-        </link>
-        <updated>2019-10-31T06:00:00Z</updated>
+        <link href="https://oclif.github.io/blog/2019/10/31/oclif-node-updates.html"/>
+        <updated>2019-10-31T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>To maintain a healthy project trajectory, oclif follows and supports <a href="https://nodejs.org/en/about/releases/">Node Active LTS release</a>, currently Node 10 &amp; Node 12. This means ensuring that oclif continues to play nice with coming Active LTS Node versions and other packages in the ecosys...</p>]]></summary>
         <author>
+            <name/>
+            <email/>
+            <uri/>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[oclifconf 2019: A Recap]]></title>
         <id>https://oclif.github.io/blog/2019/09/16/oclifconf-recap.html</id>
-        <link href="https://oclif.github.io/blog/2019/09/16/oclifconf-recap.html">
-        </link>
-        <updated>2019-09-16T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>In May, Heroku and Salesforce Open Source organized <a href="https://oclif.io/conf">oclifconf</a>, a conference for developers &amp; product managers building CLI tools on top of <a href="https://github.com/oclif/oclif">the open source oclif framework</a>. The speakers came from various tech companies, such as Adobe, Netlify, and ...</p>]]></summary>
+        <link href="https://oclif.github.io/blog/2019/09/16/oclifconf-recap.html"/>
+        <updated>2019-09-16T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>In May, Heroku and Salesforce Open Source organized <a href="https://oclif.io/conf">oclifconf</a>, a conference for developers &amp; product managers building CLI tools on top of <a href="https://github.com/oclif/oclif">the open source oclif framework</a>. The speakers came from various tech companies, such as Adobe, Netlify, and...</p>]]></summary>
         <author>
+            <name/>
+            <email/>
+            <uri/>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[CLI Flags Explained]]></title>
         <id>https://oclif.github.io/blog/2019/02/20/cli-flags-explained.html</id>
-        <link href="https://oclif.github.io/blog/2019/02/20/cli-flags-explained.html">
-        </link>
-        <updated>2019-02-20T06:00:00Z</updated>
+        <link href="https://oclif.github.io/blog/2019/02/20/cli-flags-explained.html"/>
+        <updated>2019-02-20T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p><code>oclif</code> makes it easy to create a command line interface (CLI) in node. Most commands have <strong>parameters</strong> — also known as &quot;flags&quot;, &quot;args&quot;, and sometimes &quot;options&quot;. This blog post explains what these parameters are and when to ...</p>]]></summary>
         <author>
             <name>Casey Watts and Jeff Dickey</name>
+            <email/>
+            <uri/>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introducing oclif]]></title>
         <id>https://oclif.github.io/blog/2018/03/20/introducing-oclif.html</id>
-        <link href="https://oclif.github.io/blog/2018/03/20/introducing-oclif.html">
-        </link>
-        <updated>2018-03-20T06:00:00Z</updated>
+        <link href="https://oclif.github.io/blog/2018/03/20/introducing-oclif.html"/>
+        <updated>2018-03-20T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p><img src="/img/2018-03-20-introducing-oclif/header.png" alt="Introducing oclif"></p> <p>Coding for the browser takes serious time. You need to deal with front-end JS, CSS, design, product, and a ton more. On the other hand, building for a CLI takes a fraction of the effort. This makes CLIs particularly great for prototyping out new fun...</p>]]></summary>
         <author>
             <name>Jeff Dickey</name>
+            <email/>
+            <uri/>
         </author>
     </entry>
 </feed>

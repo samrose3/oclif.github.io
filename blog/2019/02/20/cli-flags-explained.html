@@ -1,12 +1,41 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>CLI Flags Explained · oclif: The Open CLI Framework</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="`oclif` makes it easy to create a command line interface (CLI) in node. Most commands have **parameters** — also known as &quot;flags&quot;, &quot;args&quot;, and sometimes &quot;options&quot;. This blog post explains what these parameters are and when to use them. We also have a new feature that makes it easier for users to detect typos when using parameters."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="CLI Flags Explained · oclif: The Open CLI Framework"/><meta property="og:type" content="website"/><meta property="og:url" content="https://oclif.github.io/blog/2019/02/20/cli-flags-explained"/><meta property="og:description" content="`oclif` makes it easy to create a command line interface (CLI) in node. Most commands have **parameters** — also known as &quot;flags&quot;, &quot;args&quot;, and sometimes &quot;options&quot;. This blog post explains what these parameters are and when to use them. We also have a new feature that makes it easier for users to detect typos when using parameters."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://oclif.github.io/blog/atom.xml" title="oclif: The Open CLI Framework Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://oclif.github.io/blog/feed.xml" title="oclif: The Open CLI Framework Blog RSS Feed"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/oclif_rev.svg" alt="oclif: The Open CLI Framework"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction" target="_self">Getting Started</a></li><li class=""><a href="/conf" target="_self">oclifconf</a></li><li class=""><a href="/docs/commands" target="_self">API Reference</a></li><li class="siteNavGroupActive"><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://spectrum.chat/oclif" target="_self">Discuss</a></li><li class=""><a href="https://github.com/oclif/oclif" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Recent Posts</span></h2></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul><li class="navListItem"><a class="navItem" href="/blog/2019/12/05/oclif-eslint-migration">oclif TSLint to ESLint Migration</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/10/31/oclif-node-updates">oclif&#x27;s Current Node Support</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/09/16/oclifconf-recap">oclifconf 2019: A Recap</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2019/02/20/cli-flags-explained">CLI Flags Explained</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/03/20/introducing-oclif">Introducing oclif</a></li></ul></div></div></section></div><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>CLI Flags Explained · oclif: The Open CLI Framework</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="`oclif` makes it easy to create a command line interface (CLI) in node. Most commands have **parameters** — also known as &quot;flags&quot;, &quot;args&quot;, and sometimes &quot;options&quot;. This blog post explains what these parameters are and when to use them. We also have a new feature that makes it easier for users to detect typos when using parameters."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="CLI Flags Explained · oclif: The Open CLI Framework"/><meta property="og:type" content="website"/><meta property="og:url" content="https://oclif.github.io/blog/2019/02/20/cli-flags-explained"/><meta property="og:description" content="`oclif` makes it easy to create a command line interface (CLI) in node. Most commands have **parameters** — also known as &quot;flags&quot;, &quot;args&quot;, and sometimes &quot;options&quot;. This blog post explains what these parameters are and when to use them. We also have a new feature that makes it easier for users to detect typos when using parameters."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://oclif.github.io/blog/atom.xml" title="oclif: The Open CLI Framework Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://oclif.github.io/blog/feed.xml" title="oclif: The Open CLI Framework Blog RSS Feed"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/oclif_rev.svg" alt="oclif: The Open CLI Framework"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction" target="_self">Getting Started</a></li><li class=""><a href="/conf" target="_self">oclifconf</a></li><li class=""><a href="/docs/commands" target="_self">API Reference</a></li><li class="siteNavGroupActive"><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://spectrum.chat/oclif" target="_self">Discuss</a></li><li class=""><a href="https://github.com/oclif/oclif" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Recent Posts</span></h2></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/blog/2019/12/05/oclif-eslint-migration">oclif TSLint to ESLint Migration</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/10/31/oclif-node-updates">oclif&#x27;s Current Node Support</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/09/16/oclifconf-recap">oclifconf 2019: A Recap</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2019/02/20/cli-flags-explained">CLI Flags Explained</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/03/20/introducing-oclif">Introducing oclif</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
             document.addEventListener('DOMContentLoaded', function() {
               createToggler('#navToggler', '#docsNav', 'docsSliderActive');
               createToggler('#tocToggler', 'body', 'tocActive');
 
-              const headings = document.querySelector('.toc-headings');
+              var headings = document.querySelector('.toc-headings');
               headings && headings.addEventListener('click', function(event) {
-                if (event.target.tagName === 'A') {
-                  document.body.classList.remove('tocActive');
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
                 }
               }, false);
 
@@ -50,8 +79,8 @@
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="short-flag"></a><a href="#short-flag" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Short flag</h4>
 <p>There is also a <strong>short flag</strong> form of this flag: <code>ls -a</code>. The <code>a</code> is short for <code>all</code> in this case. A short flag always uses a single dash, and it is always represented by a single letter.</p>
-<pre><code class="hljs">ls -<span class="hljs-selector-tag">a</span>
-ls . -<span class="hljs-selector-tag">a</span>
+<pre><code class="hljs"><span class="hljs-keyword">ls</span> -a
+<span class="hljs-keyword">ls</span> . -a
 </code></pre>
 <p>Short flags can <strong>stack</strong> too, so you don't need a separate dash for each one. Order does not matter for these, unless passing a flag argument.</p>
 <pre><code class="hljs"><span class="hljs-keyword">ls</span> -<span class="hljs-keyword">la</span>
@@ -59,14 +88,14 @@ ls . -<span class="hljs-selector-tag">a</span>
 <h4><a class="anchor" aria-hidden="true" id="flag-arguments"></a><a href="#flag-arguments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Flag arguments</h4>
 <p>Many flags accept an <strong>option</strong>, which is a &quot;flag argument&quot; (as opposed to a &quot;command argument&quot;). In general a command's parameters can be in any order, but flags that accept options must have the option directly after the flag.</p>
 <p>For an example, here the <code>-x</code> flag does not accept an option but the <code>-f</code> flag does. <code>archive.tar</code> is the option being passed to <code>-f</code>.</p>
-<pre><code class="hljs">tar -x -f archive<span class="hljs-selector-class">.tar</span>
-tar -xf archive<span class="hljs-selector-class">.tar</span>
+<pre><code class="hljs"><span class="hljs-selector-tag">tar</span> <span class="hljs-selector-tag">-x</span> <span class="hljs-selector-tag">-f</span> <span class="hljs-selector-tag">archive</span><span class="hljs-selector-class">.tar</span>
+<span class="hljs-selector-tag">tar</span> <span class="hljs-selector-tag">-xf</span> <span class="hljs-selector-tag">archive</span><span class="hljs-selector-class">.tar</span>
 </code></pre>
 <p>A flag and its option can be separated by a space <code></code> or an equals sign <code>=</code>. Interestingly, short flags (but not long flags) can even skip the space, although many people find it much easier to read with the space or equals sign.</p>
 <p>These three are all valid and equivalent:</p>
-<pre><code class="hljs">tar -f archive<span class="hljs-selector-class">.tar</span>
-tar -f=archive<span class="hljs-selector-class">.tar</span>
-tar -farchive<span class="hljs-selector-class">.tar</span>
+<pre><code class="hljs"><span class="hljs-attr">tar</span> <span class="hljs-string">-f archive.tar</span>
+<span class="hljs-attr">tar</span> <span class="hljs-string">-f=archive.tar</span>
+<span class="hljs-attr">tar</span> <span class="hljs-string">-farchive.tar</span>
 </code></pre>
 <p>Long flags must have a space or equals sign to separate the flag from its option.</p>
 <pre><code class="hljs">git <span class="hljs-built_in">log</span> <span class="hljs-comment">--pretty=oneline</span>
@@ -114,6 +143,17 @@ It is really easy to make a typo and use one dash instead of two, or vice versa.
 <p>This is an example of a &quot;did you mean?&quot; command, like this ruby plugin <a href="https://github.com/yuki24/did_you_mean">did_you_mean</a>.
 --&gt;</p>
 </span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog">Recent Posts</a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://www.heroku.com/home">Heroku</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/master/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
               var search = docsearch({
                 
                 apiKey: '433a7758541da1949f63b813ddf5c78c',
