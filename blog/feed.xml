@@ -4,7 +4,7 @@
         <title>oclif: The Open CLI Framework Blog</title>
         <link>https://oclif.github.io/blog</link>
         <description>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</description>
-        <lastBuildDate>Thu, 05 Dec 2019 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 05 May 2020 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://oclif.github.io/blog</link>
         </image>
         <copyright>Copyright © 2020 Salesforce.com</copyright>
+        <item>
+            <title><![CDATA[Customizing Help in oclif]]></title>
+            <link>https://oclif.github.io/blog/2020/05/05/introducing-custom-help-classes.html</link>
+            <guid>https://oclif.github.io/blog/2020/05/05/introducing-custom-help-classes.html</guid>
+            <pubDate>Tue, 05 May 2020 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Out of the box oclif provides a great help experience for both single and multi-command CLIs via <a href="https://github.com/oclif/plugin-help">@oclif/plugin-help</a>.</p> <p>But what if, as an oclif developer, you want to customize some or all of the output?</p> <p>Starting in <code>@oclif/command@1.6.0</code> which packages ...</p>]]></description>
+        </item>
         <item>
             <title><![CDATA[oclif TSLint to ESLint Migration]]></title>
             <link>https://oclif.github.io/blog/2019/12/05/oclif-eslint-migration.html</link>

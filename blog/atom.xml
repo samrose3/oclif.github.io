@@ -2,12 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://oclif.github.io/blog</id>
     <title>oclif: The Open CLI Framework Blog</title>
-    <updated>2019-12-05T06:00:00.000Z</updated>
+    <updated>2020-05-05T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://oclif.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</subtitle>
     <logo>https://oclif.github.io/img/oclif_rev.svg</logo>
     <rights>Copyright © 2020 Salesforce.com</rights>
+    <entry>
+        <title type="html"><![CDATA[Customizing Help in oclif]]></title>
+        <id>https://oclif.github.io/blog/2020/05/05/introducing-custom-help-classes.html</id>
+        <link href="https://oclif.github.io/blog/2020/05/05/introducing-custom-help-classes.html"/>
+        <updated>2020-05-05T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>Out of the box oclif provides a great help experience for both single and multi-command CLIs via <a href="https://github.com/oclif/plugin-help">@oclif/plugin-help</a>.</p> <p>But what if, as an oclif developer, you want to customize some or all of the output?</p> <p>Starting in <code>@oclif/command@1.6.0</code> which packages ...</p>]]></summary>
+        <author>
+            <name/>
+            <email/>
+            <uri/>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[oclif TSLint to ESLint Migration]]></title>
         <id>https://oclif.github.io/blog/2019/12/05/oclif-eslint-migration.html</id>

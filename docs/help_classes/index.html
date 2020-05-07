@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Help Classes · oclif: The Open CLI Framework</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Out of the box oclif provides a great help experience for both single and multi-command CLIs via [@oclif/plugin-help](https://github.com/oclif/plugin-help). "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Help Classes · oclif: The Open CLI Framework"/><meta property="og:type" content="website"/><meta property="og:url" content="https://oclif.github.io/"/><meta property="og:description" content="Out of the box oclif provides a great help experience for both single and multi-command CLIs via [@oclif/plugin-help](https://github.com/oclif/plugin-help). "/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://oclif.github.io/blog/atom.xml" title="oclif: The Open CLI Framework Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://oclif.github.io/blog/feed.xml" title="oclif: The Open CLI Framework Blog RSS Feed"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/oclif_rev.svg" alt="oclif: The Open CLI Framework"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/introduction" target="_self">Getting Started</a></li><li class=""><a href="/conf" target="_self">oclifconf</a></li><li class="siteNavGroupActive"><a href="/docs/commands" target="_self">API Reference</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://spectrum.chat/oclif" target="_self">Discuss</a></li><li class=""><a href="https://github.com/oclif/oclif" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API Reference</span></h2></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/features">Features</a></li><li class="navListItem"><a class="navItem" href="/docs/faqs">FAQs</a></li><li class="navListItem"><a class="navItem" href="/docs/single">Single-command CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/multi">Multi-command CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/generator_commands">Generator Commands</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/commands">Commands</a></li><li class="navListItem"><a class="navItem" href="/docs/args">Command Arguments</a></li><li class="navListItem"><a class="navItem" href="/docs/flags">Command Flags</a></li><li class="navListItem"><a class="navItem" href="/docs/config">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/topics">Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/hooks">Hooks</a></li><li class="navListItem"><a class="navItem" href="/docs/plugins">Plugins</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/help_classes">Help Classes</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">How to</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/releasing">Release</a></li><li class="navListItem"><a class="navItem" href="/docs/testing">Testing</a></li><li class="navListItem"><a class="navItem" href="/docs/running_programmatically">Running Commands Programmatically</a></li><li class="navListItem"><a class="navItem" href="/docs/aliases">Aliases</a></li><li class="navListItem"><a class="navItem" href="/docs/base_class">Custom Base Class</a></li><li class="navListItem"><a class="navItem" href="/docs/prompting">Prompting</a></li><li class="navListItem"><a class="navItem" href="/docs/spinner">Spinner</a></li><li class="navListItem"><a class="navItem" href="/docs/table">Table</a></li><li class="navListItem"><a class="navItem" href="/docs/notifications">Notifications</a></li><li class="navListItem"><a class="navItem" href="/docs/debugging">Debugging</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Also See</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/examples">Examples</a></li><li class="navListItem"><a class="navItem" href="/docs/external_links">External Links</a></li><li class="navListItem"><a class="navItem" href="/docs/related_repos">Related Repositories</a></li><li class="navListItem"><a class="navItem" href="/docs/feedback">Feedback</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/oclif/oclif.github.io/tree/docs/docs/help_classes.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Help Classes</h1></header><article><div><span><p>Out of the box oclif provides a great help experience for both single and multi-command CLIs via <a href="https://github.com/oclif/plugin-help">@oclif/plugin-help</a>.</p>
+<p>User can invoke help with the <code>--help</code> flag.</p>
+<pre><code class="hljs">$ <span class="hljs-keyword">my</span>-cli login <span class="hljs-comment">--help</span>
+</code></pre>
+<p>And with the <code>-h</code> short flag if all argument positions have been filled (otherwise the short flag will be considered arg input).</p>
+<pre><code class="hljs">$ <span class="hljs-keyword">my</span>-cli whoami -h
+</code></pre>
+<p>If you want your CLI to have an explicit <code>help</code> command, add <code>@oclif/plugin-help</code> as an <a href="/docs/plugins">oclif plugin in your config</a>.</p>
+<pre><code class="hljs"><span class="hljs-meta">$</span><span class="bash"> my-cli <span class="hljs-built_in">help</span></span>
+</code></pre>
+<p>Note: <code>@oclif/plugin-help</code> is packaged with <code>@oclif/command</code> so you do not need to add it to your dev dependencies.</p>
+<h2><a class="anchor" aria-hidden="true" id="custom-help"></a><a href="#custom-help" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom Help</h2>
+<p>Starting in <code>@oclif/command@1.6.0</code> which packages v3 of <code>@oclif/plugin-help</code>, you can now customize your CLI's help output by implementing the <code>HelpBase</code> abstract class.</p>
+<p>If you have not done so yet, update <code>@oclif/command</code>.</p>
+<pre><code class="hljs">$ yarn <span class="hljs-keyword">add</span><span class="bash"> --latest @oclif/<span class="hljs-built_in">command</span></span>
+</code></pre>
+<p>To get started, first define the filepath to your help class in oclif's config in package.json. This is a relative path to the help class, without a file extension.</p>
+<p>For this example, the help class will be created in a file at &quot;[project root]/src/help.ts&quot;.</p>
+<pre><code class="hljs">{
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-attr">"oclif"</span>: {
+    <span class="hljs-attr">"helpClass"</span>: <span class="hljs-string">"./lib/help"</span>
+    <span class="hljs-comment">// ...</span>
+  }
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>From here there are two paths, implement the <code>HelpBase</code> abstract class yourself or overwrite the parts of the default <code>Help</code> class you want to customize (ex: how command usage is displayed). We recommend the latter approach but cover both below.</p>
+<h2><a class="anchor" aria-hidden="true" id="extending-the-helpbase-class"></a><a href="#extending-the-helpbase-class" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extending the <code>HelpBase</code> class</h2>
+<p>The <code>HelpBase</code> abstract class provides a starting point requiring the minimum needed methods implemented to be compatible with oclif.</p>
+<pre><code class="hljs css language-TypeScript"><span class="hljs-keyword">import</span> {HelpBase} <span class="hljs-keyword">from</span> <span class="hljs-string">'@oclif/plugin-help'</span>;
+<span class="hljs-keyword">import</span> {Command} <span class="hljs-keyword">from</span> <span class="hljs-string">'@oclif/config'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> CustomHelp <span class="hljs-keyword">extends</span> HelpBase {
+  showHelp(args: <span class="hljs-built_in">string</span>[]) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'This will be displayed in multi-command CLIs'</span>)
+  }
+
+  showCommandHelp(command: Command) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'This will be displayed in single-command CLIs'</span>)
+  }
+}
+</code></pre>
+<p>The <code>showHelp</code> method is called by oclif to display help in multi-command CLIs, while <code>showCommandHelp</code> is called directly for single-command CLIs.</p>
+<p>The class is instantiated with a <code>config</code> property that provides helpful context for constructing your custom output.</p>
+<p>To see an example of what is possible take a look at the source code for the <a href="https://github.com/oclif/plugin-help/blob/master/src/index.ts">default <code>Help</code> class exported from @oclif/plugin-help</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="extending-the-default-help-class"></a><a href="#extending-the-default-help-class" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extending the default <code>Help</code> class</h2>
+<p>The default <code>Help</code> class provides many method “hooks” that make it easy to override the particular parts of help's output you want to customize.</p>
+<pre><code class="hljs css language-TypeScript"><span class="hljs-keyword">import</span> Help <span class="hljs-keyword">from</span> <span class="hljs-string">'@oclif/plugin-help'</span>;
+<span class="hljs-keyword">import</span> {Command, Topic} <span class="hljs-keyword">from</span> <span class="hljs-string">'@oclif/config'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> MyHelpClass <span class="hljs-keyword">extends</span> Help {
+  <span class="hljs-comment">// acts as a "router"</span>
+  <span class="hljs-comment">// and based on the args it receives</span>
+  <span class="hljs-comment">// calls one of showRootHelp, showTopicHelp,</span>
+  <span class="hljs-comment">// or showCommandHelp</span>
+  showHelp(args: <span class="hljs-built_in">string</span>[]): <span class="hljs-built_in">void</span> {
+  }
+
+  <span class="hljs-comment">// display the root help of a CLI</span>
+  showRootHelp(): <span class="hljs-built_in">void</span> {
+  }
+
+  <span class="hljs-comment">// display help for a topic</span>
+  showTopicHelp(topic: Topic): <span class="hljs-built_in">void</span> {
+  }
+
+  <span class="hljs-comment">// display help for a command</span>
+  showCommandHelp(command: Command): <span class="hljs-built_in">void</span> {
+  }
+
+  <span class="hljs-comment">// the default implementations of showRootHelp</span>
+  <span class="hljs-comment">// showTopicHelp and showCommandHelp</span>
+  <span class="hljs-comment">// will call various format methods that</span>
+  <span class="hljs-comment">// provide the formatting for their corresponding</span>
+  <span class="hljs-comment">// help sections;</span>
+  <span class="hljs-comment">// these can be overwritten as well</span>
+
+  <span class="hljs-comment">// the formatting responsible for the header</span>
+  <span class="hljs-comment">// displayed for the root help</span>
+  formatRoot(): <span class="hljs-built_in">string</span> {
+  }
+
+  <span class="hljs-comment">// the formatting for an individual topic</span>
+  formatTopic(topic: Config.Topic): <span class="hljs-built_in">string</span> {
+  }
+
+  <span class="hljs-comment">// the formatting for a list of topics</span>
+  <span class="hljs-keyword">protected</span> formatTopics(topics: Config.Topic[]): <span class="hljs-built_in">string</span> {
+  }
+
+  <span class="hljs-comment">// the formatting for a list of commands</span>
+  formatCommands(commands: Config.Command[]): <span class="hljs-built_in">string</span> {
+  }
+
+  <span class="hljs-comment">// the formatting for an individual command</span>
+  formatCommand(command: Config.Command): <span class="hljs-built_in">string</span> {
+  }
+}
+</code></pre>
+<p>To see the default implementation of these methods take a look at the <a href="https://github.com/oclif/plugin-help/blob/master/src/index.ts">default <code>Help</code> class exported from @oclif/plugin-help</a>.</p>
+<p>To start experimenting, define <code>showCommandHelp</code> in your custom help class and change the output.</p>
+<pre><code class="hljs css language-TypeScript"><span class="hljs-keyword">import</span> Help <span class="hljs-keyword">from</span> <span class="hljs-string">'@oclif/plugin-help'</span>;
+<span class="hljs-keyword">import</span> {Command, Topic} <span class="hljs-keyword">from</span> <span class="hljs-string">'@oclif/config'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> MyHelpClass <span class="hljs-keyword">extends</span> Help {
+  <span class="hljs-keyword">public</span> showCommandHelp(command: Config.Command) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Display my custom command help!'</span>)
+  }
+}
+</code></pre>
+<p>Then run help for any command.</p>
+<pre><code class="hljs">$ my-<span class="hljs-keyword">cli</span> login --<span class="hljs-keyword">help</span>
+<span class="hljs-keyword">Display</span> my custom command <span class="hljs-keyword">help</span>!
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="building-custom-help-classes-in-javascript-projects"></a><a href="#building-custom-help-classes-in-javascript-projects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building custom help classes in JavaScript projects</h2>
+<p>These examples above followed a TypeScript project. For  JavaScript project with an example help file at &quot;[project root]/src/help.js&quot; would have a package.json with the <code>helpClass</code> defined:</p>
+<pre><code class="hljs">{
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-attr">"oclif"</span>: {
+    <span class="hljs-attr">"helpClass"</span>: <span class="hljs-string">"./src/help"</span>
+    <span class="hljs-comment">// ...</span>
+  }
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>The imports are handled slightly different for JavaScript projects but the rest of the help class mimic the TypeScript examples above, except without type annotations.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> {HelpBase} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@oclif/plugin-help'</span>);
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyHelpClass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">HelpBase</span> </span>{
+  showHelp(args) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'This will be displayed in multi-command CLIs'</span>)
+  }
+
+  showCommandHelp(command) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'This will be displayed in single-command CLIs'</span>)
+  }
+}
+</code></pre>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> {HelpBase} = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@oclif/plugin-help'</span>);
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyHelpClass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">HelpBase</span> </span>{
+  showHelp(args) {
+  }
+
+  showRootHelp() {
+  }
+
+  showTopicHelp(topic) {
+  }
+
+  showCommandHelp(command) {
+  }
+
+  formatRoot() {
+  }
+
+  formatTopic(topic) {
+  }
+
+  formatTopics(topics) {
+  }
+
+  formatCommands(commands) {
+  }
+
+  formatCommand(command) {
+  }
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/7/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/plugins"><span class="arrow-prev">← </span><span>Plugins</span></a><a class="docs-next button" href="/docs/releasing"><span>Release</span><span class="arrow-next"> →</span></a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://www.heroku.com/home">Heroku</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/master/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '433a7758541da1949f63b813ddf5c78c',
+                indexName: 'oclif',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
