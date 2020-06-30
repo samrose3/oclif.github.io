@@ -4,7 +4,7 @@
         <title>oclif: The Open CLI Framework Blog</title>
         <link>https://oclif.github.io/blog</link>
         <description>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</description>
-        <lastBuildDate>Tue, 05 May 2020 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 Jul 2020 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://oclif.github.io/blog</link>
         </image>
         <copyright>Copyright © 2020 Salesforce.com</copyright>
+        <item>
+            <title><![CDATA[Pretty Printable Errors]]></title>
+            <link>https://oclif.github.io/blog/2020/07/01/pretty-printable-errors.html</link>
+            <guid>https://oclif.github.io/blog/2020/07/01/pretty-printable-errors.html</guid>
+            <pubDate>Wed, 01 Jul 2020 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Often CLIs are used as handy tools and when things go wrong it’s useful to have additional context. In oclif we have added a couple of additional properties that can show extra context to the users when an error is displayed. The <code>code</code>, <code>ref</code> and <code>sugges...</code></p>]]></description>
+        </item>
         <item>
             <title><![CDATA[Customizing Help in oclif]]></title>
             <link>https://oclif.github.io/blog/2020/05/05/introducing-custom-help-classes.html</link>
