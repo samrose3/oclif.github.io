@@ -79,10 +79,13 @@
     <span class="hljs-keyword">this</span>.flags = flags
   }
   <span class="hljs-keyword">async</span> <span class="hljs-keyword">catch</span>(err) {
-    <span class="hljs-comment">// handle any error from the command</span>
+    <span class="hljs-comment">// add any custom logic to handle errors from the command</span>
+    <span class="hljs-comment">// or simply return the parent class error handling</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.catch(err);
   }
   <span class="hljs-keyword">async</span> <span class="hljs-keyword">finally</span>(err) {
     <span class="hljs-comment">// called after run and catch regardless of whether or not the command errored</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.finally(_);
   }
 }
 
@@ -101,7 +104,7 @@
   }
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/11/2019</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/aliases"><span class="arrow-prev">← </span><span>Aliases</span></a><a class="docs-next button" href="/docs/prompting"><span>Prompting</span><span class="arrow-next"> →</span></a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://www.heroku.com/home">Heroku</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/master/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/2/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/aliases"><span class="arrow-prev">← </span><span>Aliases</span></a><a class="docs-next button" href="/docs/prompting"><span>Prompting</span><span class="arrow-next"> →</span></a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://www.heroku.com/home">Heroku</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/master/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
