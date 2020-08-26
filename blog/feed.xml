@@ -4,7 +4,7 @@
         <title>oclif: The Open CLI Framework Blog</title>
         <link>https://oclif.github.io/blog</link>
         <description>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</description>
-        <lastBuildDate>Wed, 01 Jul 2020 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Aug 2020 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://oclif.github.io/blog</link>
         </image>
         <copyright>Copyright © 2020 Salesforce.com</copyright>
+        <item>
+            <title><![CDATA[oclif Summer Update]]></title>
+            <link>https://oclif.github.io/blog/2020/08/26/summer-update.html</link>
+            <guid>https://oclif.github.io/blog/2020/08/26/summer-update.html</guid>
+            <pubDate>Wed, 26 Aug 2020 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Hello oclif developers! We hope you are all doing well.</p> <p>Earlier this year, we started our planning for oclifconf v2 and, like all conference, had to change course. We opted not to hold a virtual conference, however, we wanted to take some time to hig...</p>]]></description>
+        </item>
         <item>
             <title><![CDATA[Pretty Printable Errors]]></title>
             <link>https://oclif.github.io/blog/2020/07/01/pretty-printable-errors.html</link>

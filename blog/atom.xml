@@ -2,12 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://oclif.github.io/blog</id>
     <title>oclif: The Open CLI Framework Blog</title>
-    <updated>2020-07-01T06:00:00.000Z</updated>
+    <updated>2020-08-26T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://oclif.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</subtitle>
     <logo>https://oclif.github.io/img/oclif_rev.svg</logo>
     <rights>Copyright © 2020 Salesforce.com</rights>
+    <entry>
+        <title type="html"><![CDATA[oclif Summer Update]]></title>
+        <id>https://oclif.github.io/blog/2020/08/26/summer-update.html</id>
+        <link href="https://oclif.github.io/blog/2020/08/26/summer-update.html"/>
+        <updated>2020-08-26T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>Hello oclif developers! We hope you are all doing well.</p> <p>Earlier this year, we started our planning for oclifconf v2 and, like all conference, had to change course. We opted not to hold a virtual conference, however, we wanted to take some time to hig...</p>]]></summary>
+        <author>
+            <name/>
+            <email/>
+            <uri/>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Pretty Printable Errors]]></title>
         <id>https://oclif.github.io/blog/2020/07/01/pretty-printable-errors.html</id>
