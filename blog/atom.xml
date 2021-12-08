@@ -49,7 +49,7 @@
         <id>https://oclif.github.io/blog/2020/05/05/introducing-custom-help-classes.html</id>
         <link href="https://oclif.github.io/blog/2020/05/05/introducing-custom-help-classes.html"/>
         <updated>2020-05-05T06:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>Out of the box oclif provides a great help experience for both single and multi-command CLIs via <a href="https://github.com/oclif/plugin-help">@oclif/plugin-help</a>.</p> <p>But what if, as an oclif developer, you want to customize some or all of the output?</p> <p>Starting in <code>@oclif/command@1.6.0</code> which packages ...</p>]]></summary>
+        <summary type="html"><![CDATA[<p>Out of the box oclif provides a great help experience for both single and multi-command CLIs via <a href="https://github.com/oclif/plugin-help">@oclif/plugin-help</a>.</p> <p>But what if, as an oclif developer, you want to customize some or all of the output?</p> <p>Starting in <code>@oclif/core@1.6.0</code> which packages v3 ...</p>]]></summary>
         <author>
             <name/>
             <email/>

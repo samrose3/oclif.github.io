@@ -39,7 +39,7 @@
             <link>https://oclif.github.io/blog/2020/05/05/introducing-custom-help-classes.html</link>
             <guid>https://oclif.github.io/blog/2020/05/05/introducing-custom-help-classes.html</guid>
             <pubDate>Tue, 05 May 2020 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Out of the box oclif provides a great help experience for both single and multi-command CLIs via <a href="https://github.com/oclif/plugin-help">@oclif/plugin-help</a>.</p> <p>But what if, as an oclif developer, you want to customize some or all of the output?</p> <p>Starting in <code>@oclif/command@1.6.0</code> which packages ...</p>]]></description>
+            <description><![CDATA[<p>Out of the box oclif provides a great help experience for both single and multi-command CLIs via <a href="https://github.com/oclif/plugin-help">@oclif/plugin-help</a>.</p> <p>But what if, as an oclif developer, you want to customize some or all of the output?</p> <p>Starting in <code>@oclif/core@1.6.0</code> which packages v3 ...</p>]]></description>
         </item>
         <item>
             <title><![CDATA[oclif TSLint to ESLint Migration]]></title>
