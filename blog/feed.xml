@@ -4,7 +4,7 @@
         <title>oclif: The Open CLI Framework Blog</title>
         <link>https://oclif.github.io/blog</link>
         <description>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</description>
-        <lastBuildDate>Mon, 01 Mar 2021 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 12 Jan 2022 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://oclif.github.io/blog</link>
         </image>
         <copyright>Copyright © 2022 Salesforce.com</copyright>
+        <item>
+            <title><![CDATA[Announcing oclif v2!]]></title>
+            <link>https://oclif.github.io/blog/2022/01/12/announcing-oclif-v2.html</link>
+            <guid>https://oclif.github.io/blog/2022/01/12/announcing-oclif-v2.html</guid>
+            <pubDate>Wed, 12 Jan 2022 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Hello and happy new year! It's our great pleasure to announce that we have released oclif v2, which uses the new <a href="https://github.com/oclif/core">@oclif/core</a> library! 🎉</p> <p>oclif v2 includes many changes that improve the experience of both creating and using an oclif CLI.</p> <p>Going forward,...</p>]]></description>
+        </item>
         <item>
             <title><![CDATA[Introducing @oclif/core]]></title>
             <link>https://oclif.github.io/blog/2021/03/01/introducing-oclif-core.html</link>

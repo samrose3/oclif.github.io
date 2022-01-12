@@ -2,12 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://oclif.github.io/blog</id>
     <title>oclif: The Open CLI Framework Blog</title>
-    <updated>2021-03-01T06:00:00.000Z</updated>
+    <updated>2022-01-12T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://oclif.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</subtitle>
     <logo>https://oclif.github.io/img/oclif_rev.svg</logo>
     <rights>Copyright © 2022 Salesforce.com</rights>
+    <entry>
+        <title type="html"><![CDATA[Announcing oclif v2!]]></title>
+        <id>https://oclif.github.io/blog/2022/01/12/announcing-oclif-v2.html</id>
+        <link href="https://oclif.github.io/blog/2022/01/12/announcing-oclif-v2.html"/>
+        <updated>2022-01-12T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>Hello and happy new year! It's our great pleasure to announce that we have released oclif v2, which uses the new <a href="https://github.com/oclif/core">@oclif/core</a> library! 🎉</p> <p>oclif v2 includes many changes that improve the experience of both creating and using an oclif CLI.</p> <p>Going forward,...</p>]]></summary>
+        <author>
+            <name/>
+            <email/>
+            <uri/>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Introducing @oclif/core]]></title>
         <id>https://oclif.github.io/blog/2021/03/01/introducing-oclif-core.html</id>

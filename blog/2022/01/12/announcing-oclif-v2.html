@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Announcing oclif v2! · oclif: The Open CLI Framework</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Hello and happy new year! It&#x27;s our great pleasure to announce that we have released oclif v2, which uses the new [@oclif/core](https://github.com/oclif/core) library! 🎉"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Announcing oclif v2! · oclif: The Open CLI Framework"/><meta property="og:type" content="website"/><meta property="og:url" content="https://oclif.github.io/blog/2022/01/12/announcing-oclif-v2"/><meta property="og:description" content="Hello and happy new year! It&#x27;s our great pleasure to announce that we have released oclif v2, which uses the new [@oclif/core](https://github.com/oclif/core) library! 🎉"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://oclif.github.io/blog/atom.xml" title="oclif: The Open CLI Framework Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://oclif.github.io/blog/feed.xml" title="oclif: The Open CLI Framework Blog RSS Feed"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/oclif_rev.svg" alt="oclif: The Open CLI Framework"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/introduction" target="_self">Getting Started</a></li><li class=""><a href="/docs/commands" target="_self">API Reference</a></li><li class="siteNavGroupActive"><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/oclif/oclif" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All Blog Posts</span></h2></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All Blog Posts</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2022/01/12/announcing-oclif-v2">Announcing oclif v2!</a></li><li class="navListItem"><a class="navItem" href="/blog/2021/03/01/introducing-oclif-core">Introducing @oclif/core</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/08/26/summer-update">oclif Summer Update</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/07/01/pretty-printable-errors">Pretty Printable Errors</a></li><li class="navListItem"><a class="navItem" href="/blog/2020/05/05/introducing-custom-help-classes">Customizing Help in oclif</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/12/05/oclif-eslint-migration">oclif TSLint to ESLint Migration</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/10/31/oclif-node-updates">oclif&#x27;s Current Node Support</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/09/16/oclifconf-recap">oclifconf 2019: A Recap</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/02/20/cli-flags-explained">CLI Flags Explained</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/03/20/introducing-oclif">Introducing oclif</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2022/01/12/announcing-oclif-v2">Announcing oclif v2!</a></h1><p class="post-meta">January 12, 2022</p><div class="authorBlock"></div></header><div><span><p>Hello and happy new year! It's our great pleasure to announce that we have released oclif v2, which uses the new <a href="https://github.com/oclif/core">@oclif/core</a> library! 🎉</p>
+<p>oclif v2 includes many changes that improve the experience of both creating and using an oclif CLI.</p>
+<p>Going forward, we don't plan to make any updates to oclif v1 and its corresponding libraries, except for critical security fixes. See the <a href="#Compatibility-Matrix">compatibility matrix</a> for a list of these libraries. In order to give developers time to migrate from v1 to v2, we're not completely dropping support yet. But at some point in the future we'll archive the v1 repositories and deprecate their versions on NPM.</p>
+<h2><a class="anchor" aria-hidden="true" id="whats-changing"></a><a href="#whats-changing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What’s changing?</h2>
+<h3><a class="anchor" aria-hidden="true" id="repository-changes"></a><a href="#repository-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Repository Changes</h3>
+<p>All repositories under the <a href="https://github.com/oclif/">oclif org</a> now use <code>main</code> as their primary branch and <code>oclif-v1</code> as the legacy branch. The <code>main</code>  branch corresponds to oclif v2 and the <code>oclif-v1</code> branch to oclif v1. If you find any repos that don’t have a <code>main</code> branch, you can safely assume that they're not used in oclif v2 and will be deprecated in the future.</p>
+<h3><a class="anchor" aria-hidden="true" id="consolidating-tools--libraries"></a><a href="#consolidating-tools--libraries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Consolidating Tools &amp; Libraries</h3>
+<p>The <a href="https://github.com/oclif/dev-cli"><code>oclif-dev</code></a> CLI has now been incorporated into <a href="https://github.com/oclif/oclif"><code>oclif</code></a>. You now no longer need to install a separate package to manage your entire CLI’s lifecycle.</p>
+<p>The following libraries have been consolidated under <a href="https://github.com/oclif/core"><code>@oclif/core</code></a> and will be deprecated at some point in the future. Read the <a href="https://github.com/oclif/core/blob/main/MIGRATION.md">migration guide</a> to learn how to update your CLI or plugin to use the new core library.</p>
+<ul>
+<li><code>@oclif/command</code></li>
+<li><code>@oclif/config</code></li>
+<li><code>@oclif/error</code></li>
+<li><code>@oclif/help</code></li>
+<li><code>@oclif/parser</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="no-more-single-vs-multi-command-clis"></a><a href="#no-more-single-vs-multi-command-clis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>No more single vs multi command CLIs</h3>
+<p>There's only one &quot;type&quot; of oclif v2 CLI, but it can have as few or as many commands as a developer wants. As a result, there’s only one command to generate CLIs, <code>oclif generate</code>, as opposed to the old <code>oclif single</code> and <code>oclif multi</code> commands.</p>
+<h3><a class="anchor" aria-hidden="true" id="node--12"></a><a href="#node--12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Node &gt; 12</h3>
+<p>To ensure oclif CLIs are as secure as possible, all v2 libraries and plugins support only Node 12 or higher as of now. Going forward, they'll support only Node Maintenance or higher, as defined by Node's release schedule here: <a href="https://nodejs.org/en/about/releases/">https://nodejs.org/en/about/releases/</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="whats-new"></a><a href="#whats-new" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What’s new?</h2>
+<h3><a class="anchor" aria-hidden="true" id="new-example-cli"></a><a href="#new-example-cli" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>New example CLI</h3>
+<p><a href="https://github.com/oclif/hello-world/"><code>oclif-hello-world</code></a> is our new example repo. This is also the repo that's <a href="https://github.com/oclif/oclif/blob/edc6616e51/src/generators/cli.ts#L74">used as a template</a> when running <code>oclif generate</code> to create a new CLI. This repo will always be able to be referenced as an example of what an oclif v2 CLI should look like.</p>
+<h3><a class="anchor" aria-hidden="true" id="spaced-commands"></a><a href="#spaced-commands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Spaced commands</h3>
+<p>oclif CLIs can now use spaces, instead of colons, to separate topics and subcommands. To enable this feature, simply add <code>“topicSeparator&quot;: &quot; &quot;</code> to the oclif config in your package.json. See an example in our <a href="https://github.com/oclif/hello-world/blob/main/package.json#L55">example repo</a>.</p>
+<pre><code class="hljs">// Old commands that <span class="hljs-keyword">use</span> :
+$ <span class="hljs-type">mycli</span> <span class="hljs-keyword">do</span>:something
+</code></pre>
+<pre><code class="hljs"><span class="hljs-comment">// New spaced commands</span>
+$ mycli <span class="hljs-keyword">do</span> something
+</code></pre>
+<blockquote>
+<p>Note: Spaced commands are backwards compatible. So if you enable spaced commands for your CLI, users will still be able to use <code>:</code> as a separator. This ensures that any existing scripts don't break.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="new-help-output"></a><a href="#new-help-output" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>New Help Output</h3>
+<p>We’ve revamped the way command help is outputted to the terminal, making it both easier to implement and easier to read. See the difference between the old help output on the left and the new help output on the right in the screenshots below.</p>
+<table border="0">
+ <tr>
+    <td>oclif v1</td>
+    <td>oclif v2</td>
+ </tr>
+ <tr>
+    <td><img src="/img/2022-01-12-announcing-oclif-v2/sfdx-help.png"/></td>
+    <td><img src="/img/2022-01-12-announcing-oclif-v2/sf-help.png"/></td>
+ </tr>
+</table>
+<p>Notice that there are new sections for flags and global flags, examples are displayed with better spacing, and there is a section at the bottom called Configuration Variables. This Configuration Variables section is not part of the new help by default. But we've added support for custom help sections, which is what the <code>sf</code> CLI uses to create the new section.</p>
+<h3><a class="anchor" aria-hidden="true" id="async-command-parsing"></a><a href="#async-command-parsing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Async Command Parsing</h3>
+<p>We’ve also improved the performance of new CLIs by rewriting how commands are parsed on initialization. The <a href="https://github.com/oclif/core/blob/main/src/parser/parse.ts">new parser</a> is asynchronous, which makes CLIs with a lot of commands or installed  plugins much faster.</p>
+<h2><a class="anchor" aria-hidden="true" id="whats-coming-next"></a><a href="#whats-coming-next" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What’s coming next?</h2>
+<p>Part of our charter for the release of oclif v2 includes improving our engagement with the oclif community. We know that over the past couple of years we’ve reduced our involvement, and a lot of issues and PRs have languished in limbo. Hopefully you’ve already seen increased activity and responses from oclif maintainers recently, but if you haven’t, please don’t hesitate to ping us by tagging <a href="https://github.com/orgs/oclif/teams/admins">@admins</a> in oclif repos.</p>
+<p>We also want to start interviewing members of the oclif community to acquire feedback and prioritize the features and fixes you deem most important!</p>
+<p>Best,</p>
+<p>The oclif team</p>
+<p><br/></p>
+<h3><a class="anchor" aria-hidden="true" id="reference-material"></a><a href="#reference-material" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference material</h3>
+<h4><a class="anchor" aria-hidden="true" id="migration-guide"></a><a href="#migration-guide" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Migration Guide</h4>
+<p>This guide explains how to upgrade a CLI or plugin from the old oclif v1 libraries to the new <code>@oclif/core</code> library that oclif v2 uses.</p>
+<p><a href="https://github.com/oclif/core/blob/main/MIGRATION.md">https://github.com/oclif/core/blob/main/MIGRATION.md</a></p>
+<h4><a class="anchor" aria-hidden="true" id="compatibility-matrix"></a><a href="#compatibility-matrix" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Compatibility Matrix</h4>
+<p>The following matrix shows how the v1 libraries and plugins relate to the new v2 ones. Use this matrix as a guide to know what to drop and which versions to switch when upgrading your plugins and CLIs to v2.</p>
+<table>
+<thead>
+<tr><th></th><th>oclif &quot;v1&quot;</th><th>oclif &quot;v2&quot;</th></tr>
+</thead>
+<tbody>
+<tr><td>Utility CLIs</td><td>oclif@&lt;2<br/>@oclif/dev-cli@&lt;2</td><td>oclif@&gt;=2</td></tr>
+<tr><td>Main packages</td><td>@oclif/command<br/>@oclif/config<br/>@oclif/errors<br/>@oclif/parser<br/>@oclif/plugin-help<br/></td><td>@oclif/core@&gt;=1</td></tr>
+<tr><td>Node LTS</td><td>Node v8-14</td><td>Node v12+ (at time of writing)</td></tr>
+<tr><td>Typescript</td><td>typescript@&lt;4</td><td>typescript@&gt;=4</td></tr>
+<tr><td>Main plugins</td><td>@oclif/plugin-autocomplete@&lt;1<br/>@oclif/plugin-commands@&lt;2<br/>@oclif/plugin-help@&lt;4<br/>@oclif/plugin-not-found@&lt;2<br/>@oclif/plugin-plugins@&lt;2<br/>@oclif/plugin-update@&lt;2<br/>plugin-warn-if-update-available@&lt;2<br/>plugin-which@&lt;2<br/></td><td>@oclif/plugin-autocomplete@&gt;=1<br/>@oclif/plugin-commands@&gt;=2<br/>@oclif/plugin-help@&gt;=4<br/>@oclif/plugin-not-found@&gt;=2<br/>@oclif/plugin-plugins@&gt;=2<br/>@oclif/plugin-update@&gt;=2<br/>@oclif/plugin-warn-if-update-available@&gt;=2<br/>@oclif/plugin-which@&gt;=2<br/></td></tr>
+</tbody>
+</table>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog">Recent Posts</a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://developer.salesforce.com/home">Salesforce</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/main/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '433a7758541da1949f63b813ddf5c78c',
+                indexName: 'oclif',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
