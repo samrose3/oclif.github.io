@@ -63,11 +63,6 @@
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`example init hook running before <span class="hljs-subst">${options.id}</span>`</span>)
 }
 </code></pre>
-<p>Or in JavaScript:</p>
-<pre><code class="hljs css language-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">options</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`example init hook running before <span class="hljs-subst">${options.id}</span>`</span>)
-}
-</code></pre>
 <p>The hook must also be declared with the event's name and hook's file path under oclif's settings in <code>package.json</code>:</p>
 <pre><code class="hljs css language-js">  <span class="hljs-string">"oclif"</span>: {
     <span class="hljs-string">"commands"</span>: <span class="hljs-string">"./lib/commands"</span>,
@@ -87,7 +82,7 @@
     }
   }
 </code></pre>
-<p>You can create hooks with <code>oclif hook myhook --event=init</code>.</p>
+<p>You can create hooks with <code>oclif generate hook myhook --event=init</code>.</p>
 <h2><a class="anchor" aria-hidden="true" id="lifecycle-events"></a><a href="#lifecycle-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lifecycle Events</h2>
 <ul>
 <li><code>init</code> - runs when the CLI is initialized before a command is found to run</li>
@@ -120,7 +115,7 @@
 }
 </code></pre>
 <p>If you need to exit during a hook, use <code>this.error()</code> or <code>this.exit()</code>. Otherwise the hook will just emit a warning. This is to prevent an issue such as a plugin failing in <code>init</code> causing the entire CLI to not function.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/27/2021</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/topic_separator"><span class="arrow-prev">← </span><span>Topic Separators</span></a><a class="docs-next button" href="/docs/plugins"><span>Plugins</span><span class="arrow-next"> →</span></a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://developer.salesforce.com/home">Salesforce</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/main/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/18/2022</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/topic_separator"><span class="arrow-prev">← </span><span>Topic Separators</span></a><a class="docs-next button" href="/docs/plugins"><span>Plugins</span><span class="arrow-next"> →</span></a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://developer.salesforce.com/home">Salesforce</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/main/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
