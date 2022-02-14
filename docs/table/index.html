@@ -125,7 +125,7 @@
         extended: <span class="hljs-literal">true</span>
       }
     }, {
-      printLine: <span class="hljs-keyword">this</span>.log,
+      printLine: <span class="hljs-keyword">this</span>.log.bind(<span class="hljs-keyword">this</span>),
       ...flags, <span class="hljs-comment">// parsed flags</span>
     })
   }
@@ -189,7 +189,7 @@ Leanne Graham            Romaguera-Crona
 Clementine Bauch         Romaguera-Jacobson
 Glenna Reichert          Yost and Sons
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/20/2022</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spinner"><span class="arrow-prev">← </span><span>Spinner</span></a><a class="docs-next button" href="/docs/notifications"><span>Notifications</span><span class="arrow-next"> →</span></a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://developer.salesforce.com/home">Salesforce</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/main/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/10/2022</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spinner"><span class="arrow-prev">← </span><span>Spinner</span></a><a class="docs-next button" href="/docs/notifications"><span>Notifications</span><span class="arrow-next"> →</span></a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://developer.salesforce.com/home">Salesforce</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/main/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
