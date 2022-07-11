@@ -69,7 +69,7 @@
   }
 
   <span class="hljs-keyword">async</span> run() {
-    <span class="hljs-keyword">const</span> {flags} = <span class="hljs-keyword">this</span>.parse(MyCLI)
+    <span class="hljs-keyword">const</span> {flags} = <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.parse(MyCLI)
     <span class="hljs-keyword">if</span> (flags.force) <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'--force is set'</span>)
     <span class="hljs-keyword">if</span> (flags.file) <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`--file is: <span class="hljs-subst">${flags.file}</span>`</span>)
   }
@@ -126,7 +126,7 @@
   }
 
   <span class="hljs-keyword">async</span> run() {
-    <span class="hljs-keyword">const</span> {flags} = <span class="hljs-keyword">this</span>.parse(MyCLI)
+    <span class="hljs-keyword">const</span> {flags} = <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.parse(MyCLI)
     <span class="hljs-keyword">if</span> (flags.team) <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`--team is <span class="hljs-subst">${flags.team}</span>`</span>)
   }
 }
@@ -144,7 +144,7 @@
 <span class="hljs-variable">$</span> mycli <span class="hljs-literal">-vffoo</span>
 </code></pre>
 <p>The last one seems a little odd at first glance, but it's relatively standard in unix and makes commands like <code>tar -xvzfmytarball.tar.gz</code> possible.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/20/2022</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/args"><span class="arrow-prev">← </span><span>Command Arguments</span></a><a class="docs-next button" href="/docs/config"><span>Configuration</span><span class="arrow-next"> →</span></a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://developer.salesforce.com/home">Salesforce</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/main/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/11/2022</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/args"><span class="arrow-prev">← </span><span>Command Arguments</span></a><a class="docs-next button" href="/docs/config"><span>Configuration</span><span class="arrow-next"> →</span></a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://developer.salesforce.com/home">Salesforce</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/main/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
